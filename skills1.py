@@ -24,15 +24,27 @@ def all_even(number_list):
 
     return even_list
 
-print all_even(number_list)
+# print all_even(number_list)
 
 # Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
 def long_words(word_list):
-    return []
+    long_words_list = []
+    for word in word_list:
+        if len(word) >= 4:
+            long_words_list.append(word)
+    return long_words_list
+
+#print long_words(word_list)
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
-    return None
+    small = number_list[0]
+    for numb in number_list:
+        if numb < small:
+            small = numb
+
+    return small
+print smallest(number_list)
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
