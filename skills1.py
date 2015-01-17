@@ -28,10 +28,11 @@ def all_even(number_list):
 
 # Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
 def long_words(word_list):
-    long_words_list = []
-    for word in word_list:
-        if len(word) >= 4:
-            long_words_list.append(word)
+    # long_words_list = []
+    # for word in word_list:
+    #     if len(word) >= 4:
+    #         long_words_list.append(word)
+    long_words_list = [word for word in word_list if len(word) >= 4]
     return long_words_list
 
 # print long_words(word_list)
@@ -58,12 +59,13 @@ def largest(number_list):
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
-    divided_list = []
-    for numb in number_list:
-        half = float(numb) / 2.0
-        divided_list.append(half)
+    # divided_list = []
+    # for numb in number_list:
+    #     half = float(numb) / 2.0
+    #     divided_list.append(half)
+    divided_list = [(float(numb)/2) for numb in number_list]
     return divided_list
-#print halvesies(number_list)
+print halvesies(number_list)
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
@@ -105,5 +107,3 @@ def average(number_list):
     # divide sum by len(number_list)
     list_avg = float(sum_numbers(number_list)) / len(number_list)
     return list_avg
-
-print average(number_list)
