@@ -34,7 +34,7 @@ def long_words(word_list):
             long_words_list.append(word)
     return long_words_list
 
-#print long_words(word_list)
+# print long_words(word_list)
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
@@ -44,15 +44,26 @@ def smallest(number_list):
             small = numb
 
     return small
-print smallest(number_list)
+# print smallest(number_list)
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
-    return None
+    large = number_list[0]
+    for numb in number_list:
+        if numb > large:
+            large = numb
+
+    return large
+# print largest(number_list)
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
-    return []
+    divided_list = []
+    for numb in number_list:
+        half = float(numb) / 2.0
+        divided_list.append(half)
+    return divided_list
+print halvesies(number_list)
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
