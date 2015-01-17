@@ -5,11 +5,11 @@ word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon"
 
 # Write a function that takes a list of numbers and returns a new list with only the odd numbers.
 def all_odd(number_list):
-    oddlist =[]
-    for item in number_list:
-        if item % 2 != 0:
-            oddlist.append(item)
-
+    # oddlist =[]
+    # for item in number_list:
+    #     if item % 2 != 0:
+    #         oddlist.append(item)
+    oddlist = [item for item in number_list if item % 2 != 0]
     return oddlist
 
 # print all_odd(number_list)
@@ -17,11 +17,11 @@ def all_odd(number_list):
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
 def all_even(number_list):
 
-    even_list =[]
-    for item in number_list:
-        if item % 2 == 0:
-            even_list.append(item)
-
+    # even_list =[]
+    # for item in number_list:
+    #     if item % 2 == 0:
+    #         even_list.append(item)
+    even_list = [item for item in number_list if item % 2 == 0]
     return even_list
 
 # print all_even(number_list)
@@ -63,15 +63,22 @@ def halvesies(number_list):
         half = float(numb) / 2.0
         divided_list.append(half)
     return divided_list
-print halvesies(number_list)
+#print halvesies(number_list)
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
-    return []
+    length_list = [len(word) for word in word_list]
+    return length_list
+
+# print word_lengths(word_list)
 
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
-    return 0
+    sum_of_all_numbers = 0
+    for numb in number_list:
+        sum_of_all_numbers += numb
+    return sum_of_all_numbers
+# print sum_numbers(number_list)
 
 # Write a function that multiplies all the numbers in a list together.
 def mult_numbers(number_list):
